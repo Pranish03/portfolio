@@ -3,7 +3,6 @@ import "./globals.css";
 
 import { Poppins, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -31,11 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white bg-blu">
-        <div className="absolute -z-50 bottom-0 left-0 right-0 -top-50 bg-[radial-gradient(circle_500px_at_50%_200px,#bedbff,transparent)]" />
+      <body className="min-h-full bg-neutral-100">
+        {/* <div className="absolute -z-50 bottom-0 left-0 right-0 -top-50 bg-[radial-gradient(circle_500px_at_50%_200px,#b8e6fe,transparent)]" /> */}
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
